@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/Button.module.css"],"names":[],"mappings":"AAAA,mBACI,UAAW,CACX,uBACJ","file":"main.da9140e0.chunk.css","sourcesContent":[".btn{\n    color:white;\n    background-color: tomato;\n}"]}
