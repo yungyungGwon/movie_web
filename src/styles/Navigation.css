@@ -1,0 +1,28 @@
+li {
+    cursor: pointer;
+}
+.navigation{
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    background-color: rgb(13,22,26);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+.navigation ul{
+    margin: 25px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.nav_title_btn{
+    font-size: 30px;
+    font-weight: 600;
+}
+.nav_btns{
+    display: flex;
+}
+.nav_btns li{
+    padding: 8px 12px;
+}
