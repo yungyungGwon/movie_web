@@ -18,12 +18,15 @@ function Home() {
     getMovies();
   }, []);
   console.log(movies);
+  console.log(movies);
+
+  
   return (
     <section className="container">
       {loading ? (
         <h1>Loading...</h1>
       ) : (
-        <div className="movie_list" style={{display:"flex"}}>
+        <div className="movie_list" >
           {movies.map((movie) => (
             <Movie
               key={movie.id}

@@ -4,12 +4,15 @@ import "../styles/Movie.css";
 
 function Movie({ medium_cover_image, title, summary, genres, id }) {
   return (
-    <div className="movie_box">
-      <img style={{width:220, height:330}}src={medium_cover_image} alt={title} />
-      <h2 className="movie_title">
-        <Link to={`/movie/${id}`}>{title}</Link>
-      </h2>
+    <div className="movie_sliding_component">
+      <div className="movie_box">
+        <img style={{width:220, height:330}}src={medium_cover_image} alt={title} />
+        <h2 className="movie_title">
+          <Link to={`/movie/${id}`}>{title}</Link>
+        </h2>
+      </div>
     </div>
+    
   );
   /*
   <div>
