@@ -31,10 +31,13 @@ function Home() {
             <Movie
               key={movie.id}
               id={movie.id}
+              year={movie.year}
               medium_cover_image={movie.medium_cover_image}
               title={movie.title}
               summary={movie.summary}
               genres={movie.genres}
+              detailPoster={movie.large_cover_image}
+              backgroundImage={movie.backgroundImage}
             />
           ))}
         </div>

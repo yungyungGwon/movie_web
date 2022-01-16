@@ -2,16 +2,28 @@ import PropType from "prop-types";
 import { Link } from "react-router-dom"; /* link는 페이지 새로고침없이 전환되는 함수?이다.*/
 import "../styles/Movie.css";
 
-function Movie({ medium_cover_image, title, summary, genres, id }) {
+function Movie({ medium_cover_image, title, summary, genres, id, year, detailPoster, backgroundImage}) {
   return (
-    <div className="movie_sliding_component">
-      <div className="movie_box">
-        <img style={{width:220, height:330}}src={medium_cover_image} alt={title} />
-        <h2 className="movie_title">
-          <Link to={`/movie/${id}`}>{title}</Link>
-        </h2>
-      </div>
-    </div>
+    <Link to={{
+      pathname: `/movie/${id}`,
+      state: { 
+        medium_cover_image: medium_cover_image, 
+        title: title, 
+        summary: summary,
+        genres: genres, 
+        id: id, 
+        year: year, 
+        detailPoster: detailPoster, 
+        backgroundImage:backgroundImage 
+       }
+      }}>
+        <div className="movie_sliding_component">
+          <div className="movie_box">
+            <img style={{width:220, height:330}}src={medium_cover_image} alt={title} />
+            <h2 className="movie_title">{title}</h2>
+          </div>
+        </div>
+    </Link>
     
   );
   /*

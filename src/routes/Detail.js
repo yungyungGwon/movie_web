@@ -1,20 +1,25 @@
-import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import React from "react";
+import {useLocation} from "react-router-dom";
 
-function Detail() {
-  const { id } = useParams();
-  const getMovie = async () => {
-    const json = await (
-      await fetch(`https://yts.mx/api/v2/list_movies.json?movie_id=${id}`)
-    ).json();
-  };
-  useEffect(() => {
-    getMovie();
-  }, []);
+function Detail(state) {
+  let location = useLocation();
+  console.log(location)
+  console.log(location.state)
+  //console.log("medium_cover_image: ", state.medium_cover_image)
+  console.log("title: ",state.title)
+  //console.log("summary: ",state.summary)
+  //console.log("genres: ",state.genres)
+  //console.log("id: ",state.id)
+  //console.log("year: ",state.year)
+  //console.log("detailPoster: ",state.detailPoster)
+  //console.log("backgroundImage: ",state.backgroundImage)
   return (
     <div className="container">
       <h2>Detail</h2>
+      <div>
+        
+      </div>
     </div>
   );
-}
+} 
 export default Detail;
