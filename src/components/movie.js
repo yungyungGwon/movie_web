@@ -1,30 +1,65 @@
 import PropType from "prop-types";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom"; /* link는 페이지 새로고침없이 전환되는 함수?이다.*/
 import "../styles/Movie.css";
 
-function Movie({ medium_cover_image, title, summary, genres, id, year, detailPoster, backgroundImage}) {
+function Movie({
+  medium_cover_image,
+  title,
+  summary,
+  genres,
+  id,
+  year,
+  detailPoster,
+  backgroundImage,
+}) {
+  //useStat가 필요해보임!!!
+  /*const [data, setData] = useState([]);
+
+  const getData = async () => {
+    setData([
+      medium_cover_image,
+      title,
+      summary,
+      genres,
+      id,
+      year,
+      detailPoster,
+      backgroundImage,
+    ]);
+  };
+  useEffect(() => {
+    getData();
+  }, []);
+  console.log(data);
+*/
   return (
-    <Link to={{
-      pathname: `/movie/${id}`,
-      state: { 
-        medium_cover_image: medium_cover_image, 
-        title: title, 
-        summary: summary,
-        genres: genres, 
-        id: id, 
-        year: year, 
-        detailPoster: detailPoster, 
-        backgroundImage:backgroundImage 
-       }
-      }}>
-        <div className="movie_sliding_component">
-          <div className="movie_box">
-            <img style={{width:220, height:330}}src={medium_cover_image} alt={title} />
-            <h2 className="movie_title">{title}</h2>
-          </div>
+    <Link
+      to={{
+        pathname: `/movie/${id}`,
+        state: {
+          medium_cover_image: medium_cover_image,
+          title: title,
+          summary: summary,
+          genres: genres,
+          id: id,
+          year: year,
+          detailPoster: detailPoster,
+          backgroundImage:backgroundImage,
+        },
+      }}
+    >
+      <div className="movie_sliding_component">
+        <div className="movie_box">
+          <img
+            style={{ width: 220, height: 330 }}
+            src={medium_cover_image}
+            alt={title}
+          />
+          <h2 className="movie_title">{title}</h2>
         </div>
+      </div>
     </Link>
-    
   );
   /*
   <div>

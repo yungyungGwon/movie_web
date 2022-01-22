@@ -18,15 +18,13 @@ function Home() {
     getMovies();
   }, []);
   console.log(movies);
-  console.log(movies);
 
-  
   return (
     <section className="container">
       {loading ? (
         <h1>Loading...</h1>
       ) : (
-        <div className="movie_list" >
+        <div className="movie_list">
           {movies.map((movie) => (
             <Movie
               key={movie.id}
@@ -43,6 +41,7 @@ function Home() {
         </div>
       )}
     </section>
+    
   );
 }
 export default Home;

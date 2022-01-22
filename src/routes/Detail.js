@@ -1,25 +1,26 @@
-import React from "react";
-import {useLocation} from "react-router-dom";
+import PropType from "prop-types";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
-function Detail(state) {
-  let location = useLocation();
-  console.log(location)
-  console.log(location.state)
-  //console.log("medium_cover_image: ", state.medium_cover_image)
-  console.log("title: ",state.title)
-  //console.log("summary: ",state.summary)
-  //console.log("genres: ",state.genres)
-  //console.log("id: ",state.id)
-  //console.log("year: ",state.year)
-  //console.log("detailPoster: ",state.detailPoster)
-  //console.log("backgroundImage: ",state.backgroundImage)
+function Detail(props) {
+  const location = useLocation();
+  console.log(location);
+  console.log(props);
+
   return (
     <div className="container">
       <h2>Detail</h2>
-      <div>
-        
-      </div>
+      <h2></h2>
     </div>
   );
-} 
+}
+
+Detail.prototype = {
+  medium_cover_image: PropType.string.isRequired,
+  title: PropType.string.isRequired,
+  summary: PropType.string.isRequired,
+  genres: PropType.arrayOf(PropType.string).isRequired,
+  id: PropType.number.isRequired,
+};
+
 export default Detail;
