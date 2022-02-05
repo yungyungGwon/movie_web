@@ -15,6 +15,6 @@ Javascript, css, react, YTS api
 <br>
 <img src="./public/movieWeb_img_1.png" width="100%" height="60%"></img>
 
-* Detail
+* Detail(comming soon..)
 <br>
-comming soon..
+<img src="./public/movieWeb_img_2.png" width="100%" height="60%"></img>
