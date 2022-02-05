@@ -14,3 +14,7 @@ Javascript, css, react, YTS api
 * Home
 <br>
 <img src="./public/movieWeb_img_1.png" width="100%" height="60%"></img>
+
+* Detail
+<br>
+comming soon..
