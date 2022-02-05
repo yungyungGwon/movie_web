@@ -13,40 +13,10 @@ function Movie({
   detailPoster,
   backgroundImage,
 }) {
-  //useStat가 필요해보임!!!
-  /*const [data, setData] = useState([]);
-
-  const getData = async () => {
-    setData([
-      medium_cover_image,
-      title,
-      summary,
-      genres,
-      id,
-      year,
-      detailPoster,
-      backgroundImage,
-    ]);
-  };
-  useEffect(() => {
-    getData();
-  }, []);
-  console.log(data);
-*/
   return (
     <Link
       to={{
         pathname: `/movie/${id}`,
-        state: {
-          medium_cover_image: medium_cover_image,
-          title: title,
-          summary: summary,
-          genres: genres,
-          id: id,
-          year: year,
-          detailPoster: detailPoster,
-          backgroundImage:backgroundImage,
-        },
       }}
     >
       <div className="movie_sliding_component">

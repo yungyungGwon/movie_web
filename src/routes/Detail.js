@@ -1,16 +1,30 @@
 import PropType from "prop-types";
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 function Detail(props) {
-  const location = useLocation();
-  console.log(location);
-  console.log(props);
+  const [detail, setDetail] = useState();
+  const {id} = useParams();
+  
+
+  useEffect(() => {
+    (async() =>{
+        const getDetail = await(
+            await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
+        ).json();
+        console.log(getDetail)
+        setDetail(getDetail);
+    })();
+  }, []);
+
 
   return (
     <div className="container">
       <h2>Detail</h2>
-      <h2></h2>
+      <div>
+        
+
+      </div>
     </div>
   );
 }
