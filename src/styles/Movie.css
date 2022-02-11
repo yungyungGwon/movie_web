@@ -11,6 +11,6 @@
 }
 .movie_list{
     text-align: center;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    /*display: grid;
+    grid-template-columns: repeat(10, 1fr);*/
 }

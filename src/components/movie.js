@@ -1,5 +1,4 @@
 import PropType from "prop-types";
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom"; /* link는 페이지 새로고침없이 전환되는 함수?이다.*/
 import "../styles/Movie.css";
 

@@ -24,24 +24,33 @@ function Home() {
       {loading ? (
         <h1>Loading...</h1>
       ) : (
-        <div className="movie_list">
-          {movies.map((movie) => (
-            <Movie
-              key={movie.id}
-              id={movie.id}
-              year={movie.year}
-              medium_cover_image={movie.medium_cover_image}
-              title={movie.title}
-              summary={movie.summary}
-              genres={movie.genres}
-              detailPoster={movie.large_cover_image}
-              backgroundImage={movie.backgroundImage}
-            />
+        <div>
+          {movies.map((movie, index) => (
+           <div>
+              {index % 10 === 0 ? (
+                <div>
+                  ""
+                </div>
+              ) : (
+                <div className="movie_list">
+                <Movie
+                  key={movie.id}
+                  id={movie.id}
+                  year={movie.year}
+                  medium_cover_image={movie.medium_cover_image}
+                  title={movie.title}
+                  summary={movie.summary}
+                  genres={movie.genres}
+                  detailPoster={movie.large_cover_image}
+                  backgroundImage={movie.backgroundImage}
+                />
+                </div>
+              )}
+            </div>
           ))}
         </div>
       )}
     </section>
-    
   );
 }
 export default Home;
