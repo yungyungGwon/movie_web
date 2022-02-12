@@ -50,6 +50,20 @@ function Detail(props) {
               ? ""
               : "Description : " + info.description_full}
           </div>
+          <h1>{info.title}</h1>
+          <img
+            style={{ width: 220, height: 330 }}
+            src={info.large_cover_image}
+          ></img>
+          <div>Title : {info.title}</div>
+          <div>Genres : {info.genres}</div>
+          <div>Like Count : {info.like_count}</div>
+          <div>Rating : {info.rating}</div>
+          <div>
+            {info.description_full === ""
+              ? ""
+              : "Description : " + info.description_full}
+          </div>
         </div>
       )}
     </div>
